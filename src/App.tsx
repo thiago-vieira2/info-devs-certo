@@ -5,6 +5,8 @@ import CountUp from 'react-countup'
 import { useInView } from 'react-intersection-observer'
 import { OurServices } from './components/nossos-servicos'
 import { Footer } from './components/footer'
+import { Typewriter } from 'react-simple-typewriter';
+
 
 function App() {
   const { ref, inView } = useInView({ triggerOnce: true })
@@ -15,11 +17,26 @@ function App() {
         <Header />
       </div>
 
-      <div className="min-h-screen items-center gap-5 pt-20 flex flex-col justify-center justify-items-center text-white"> {/*div*/}
-        <h1 className='text-white text-6xl'>Building your dreams online.</h1>
-        <h1 className='text-[#777777]  text-5xl w-[65vw] text-center'>We craft high-performance websites, automation tools, and digital solutions.</h1>
+      <div className="   min-h-screen items-center gap-5 pt-20 flex flex-col justify-center justify-items-center text-white"> {/*div*/}
+        <h1 className='text-white text-6xl md:text-5xl'>
+          <Typewriter
+            words={["Construindo seus Sonhos"]}
+            
+            
+            typeSpeed={70}
+            delaySpeed={1500}
+            
+          />
+        </h1>
+        <h1 className='text-[#777777]  text-5xl md:text-4xl w-[65vw] text-center'>
+          <Typewriter
+            words={["Nós criamos sites de alta performance, ferramentas de automação e soluções digitais."]}            
+            typeSpeed={40}
+            delaySpeed={1500}
+          />
+        </h1>
         <div className="flex flex-row pt-7 gap-10">
-          <button className="bg-[#191919] text-white w-[7.5vw]  p-2 px-4 rounded-[20px] shadow">Contrate-nos</button>
+          <button className="bg-[#191919] text-white w-[7.5vw] md:w-[10vw]   p-2 px-4 rounded-[20px] shadow">Contrate-nos</button>
           <button className="bg-white text-black p-2 px-4 rounded-[20px] shadow">Portfolio</button>
         </div>
       </div>
@@ -41,8 +58,18 @@ function App() {
 
         </div>
         <div ref={ref} className="flex flex-col justify-center items-center text-white ">
-          <h1 className="text-white text-7xl">Personalizado </h1>
-          <span className='text-[#777777] text-4xl'>Soluçoes digitais</span>
+          <h1 className="text-white text-7xl">
+            <Typewriter
+              words={["Exclusivo"]}
+              typeSpeed={50}
+            />
+         </h1>
+          <span className='text-[#777777] text-4xl'>
+            <Typewriter
+              words={["Soluçoes digitais  "]}
+              typeSpeed={10}
+            />
+          </span>
 
         </div>
 

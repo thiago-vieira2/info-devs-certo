@@ -16,9 +16,9 @@ export function OurServices({text_h1, text_p, img}: OurServicesProps){
                 </div>
             </div>
 
-        <div className='flex flex-col gap-1.5 '>
-            <h1 className='font-bold text-white text-3xl'>{text_h1}</h1>
-            <p className='text-[#777777]'>{text_p}</p>
+        <div className='flex flex-col gap-1.5 md:gap-2'>
+            <h1 className='font-bold text-white text-3xl md:text-2xl'>{text_h1}</h1>
+            <p className='text-[#777777] md:w-[15vw]'>{text_p}</p>
         </div>
 
         </div>
