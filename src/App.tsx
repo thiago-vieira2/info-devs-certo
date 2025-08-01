@@ -6,6 +6,7 @@ import { useInView } from 'react-intersection-observer'
 import { OurServices } from './components/nossos-servicos'
 import { Footer } from './components/footer'
 import { Typewriter } from 'react-simple-typewriter';
+import { ScrollIndicator } from './components/scrool'
 
 
 function App() {
@@ -13,11 +14,13 @@ function App() {
 
   return (
     <div className="bg-black">
+
+      <ScrollIndicator/>
       <div className="">
         <Header />
       </div>
 
-      <div className="   min-h-screen items-center gap-5 pt-20 flex flex-col justify-center justify-items-center text-white"> {/*div*/}
+      <div id='inicio' className="   min-h-screen items-center gap-5 pt-20 flex flex-col justify-center justify-items-center text-white"> {/*div*/}
         <h1 className='text-white text-6xl md:text-5xl'>
           <Typewriter
             words={["Construindo seus Sonhos"]}
@@ -41,7 +44,7 @@ function App() {
         </div>
       </div>
 
-      <div className="flex flex-col pl-[10vw] gap-5"> {/*div sobre nos */}
+      <div id='sobre' className="flex flex-col pl-[10vw] gap-5"> {/*div sobre nos */}
         <h1 className="text-white font-bold">Sobre a Info Devs</h1>
         <p className="text-[#777777]  w-[28vw]">A Info Devs nasceu como um projeto de Trabalho de Conclusão de Curso (TCC) durante uma formação em Tecnologia da Informação. Com o tempo, a iniciativa foi ganhando forma e profissionalismo, transformando-se em uma agência especializada no desenvolvimento de sites e soluções de automação personalizadas. Hoje, a Info Devs se destaca por unir inovação, eficiência e foco nas necessidades reais dos clientes</p>
       </div>
@@ -76,7 +79,7 @@ function App() {
 
       </div>
 
-      <div className="flex justify-center gap-10">
+      <div id='servicos' className="flex justify-center gap-10">
         <OurServices
           text_h1='Desenvolvimento Web'
           text_p='Sites profissionais para todas as necessidades do seu negócio.'
@@ -131,7 +134,7 @@ function App() {
 
       </div>
 
-      <div className=" flex flex-col pl-[10vw] pt-60 items-start gap-5">
+      <div id='portfolio' className=" flex flex-col pl-[10vw] pt-60 items-start gap-5">
         <h1 className=" font-bold text-white">Nossos Trabalhos</h1>
         <p className='text-[#777777] w-[24vw]'>Portfólio selecionado: soluções inovadoras que unem design de alto padrão, código e automação.</p>
 
@@ -161,7 +164,7 @@ function App() {
 
         <div>
 
-          <div className="flex gap-5">
+          <div id='contato' className="flex gap-5">
             <div className="flex flex-col gap-2.5">
               <span className='text-[#777777]'>Name</span>
               <input className='border-none focus:outline-none text-[#777777] bg-[#191919] h-[6vh] placeholder-[#777777] pl-5 rounded-[10px]' type="text" placeholder='Seu nome' />
